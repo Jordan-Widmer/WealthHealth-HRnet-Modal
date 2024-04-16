@@ -1,6 +1,6 @@
 {
     "name": "modal_by_jsw",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "description": "modal form to appear whent it's called",
     "main": "./index.jsx",
     "module": "./index.jsx",
