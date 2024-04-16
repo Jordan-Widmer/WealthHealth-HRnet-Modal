@@ -1,27 +1,26 @@
 {
     "name": "modal_by_jsw",
-    "version": "1.1.1",
+    "version": "1.1.3",
     "description": "modal form to appear whent it's called",
     "main": "./index.jsx",
     "module": "./index.jsx",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "JSW",
     "license": "ISC",
     "dependencies": {
-      "react": "^18.2.0",
-      "react-dom": "^18.2.0"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
     },
     "devDependencies": {
-      "@types/react": "^18.2.15",
-      "@types/react-dom": "^18.2.7",
-      "@vitejs/plugin-react": "^4.0.3",
-      "eslint": "^8.45.0",
-      "eslint-plugin-react": "^7.32.2",
-      "eslint-plugin-react-hooks": "^4.6.0",
-      "eslint-plugin-react-refresh": "^0.4.3",
-      "vite": "^4.4.5"
+        "@types/react": "^18.2.15",
+        "@types/react-dom": "^18.2.7",
+        "@vitejs/plugin-react": "^4.0.3",
+        "eslint": "^8.45.0",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.3",
+        "vite": "^4.4.5"
     }
-  }
-  
+}
