@@ -38,6 +38,7 @@ Here is a simple example to help you get started with the `Modal` in your React 
 ```jsx
 import React, { useState } from 'react';
 import Modal from 'modal_by_jsw';
+import PropTypes from 'prop-types';
 
 const BurgerMenu = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
