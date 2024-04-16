@@ -1,22 +1,43 @@
-import './styles.css'
+import React, { useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
+import './styles.css';
 
-/**
- * This component represents a modal for displaying a success message.
- * @param {Object} props - The component's props.
- * @param {Function} props.setModalIsOpen - A function to set the modal's open state.
- * @returns {JSX.Element} The JSX element representing the success modal.
- */
+const Modal = ({ setModalIsOpen, text }) => {
+  const modalRef = useRef(null);
 
- // eslint-disable-next-line react/prop-types
-const Modal = ({ setModalIsOpen }) => {
+  // Close modal on Escape key press
+  useEffect(() => {
+    const closeOnEscapeKey = (e) => e.key === 'Escape' ? setModalIsOpen(false) : null;
+    document.body.addEventListener('keydown', closeOnEscapeKey);
+    return () => {
+      document.body.removeEventListener('keydown', closeOnEscapeKey);
+    };
+  }, [setModalIsOpen]);
+
+  // Focus the modal when it opens
+  useEffect(() => {
+    if (modalRef.current) {
+      modalRef.current.focus();
+    }
+  }, []);
+
   return (
-    <div className="modal-background">
-      <div className="modal-container">
+    <div className="modal-background" onClick={() => setModalIsOpen(false)}>
+      <div className="modal-container" ref={modalRef} onClick={(e) => e.stopPropagation()} tabIndex={-1}>
         <button className="modal-closer" onClick={() => setModalIsOpen(false)}>x</button>
-        <p>Employee Created!</p>
+        <p>{text}</p>
       </div>
     </div>
   );
+};
+
+Modal.propTypes = {
+  setModalIsOpen: PropTypes.func.isRequired,
+  text: PropTypes.string
+};
+
+Modal.defaultProps = {
+  text: 'your text!' // Default text in case none is provided
 };
 
 export default Modal;
