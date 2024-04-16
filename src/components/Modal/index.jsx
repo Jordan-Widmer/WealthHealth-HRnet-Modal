@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import './styles.css';
 
 const Modal = ({ setModalIsOpen, text }) => {
