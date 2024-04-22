@@ -2,6 +2,14 @@ import React, { useEffect, useRef } from 'react';
 import * as PropTypes from 'prop-types';
 import './styles.css';
 
+/**
+ * Modal component that can be closed by clicking outside of it or pressing the Escape key.
+ * It focuses automatically when opened.
+ *
+ * @param {Object} props
+ * @param {function} props.setModalIsOpen - Function to set the modal's open state.
+ * @param {string} [props.text='your text!'] - Text to be displayed inside the modal.
+ */
 const Modal = ({ setModalIsOpen, text }) => {
   const modalRef = useRef(null);
 
