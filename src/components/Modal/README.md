@@ -23,14 +23,6 @@ yarn add modal_by_jsw
 
 This library requires Node.js version 12 or higher.
 
-## Keywords
-
-- `react`
-- `modal`
-- `dialog`
-- `popup`
-- `ui-component`
-
 ## Usage
 
 Here is a simple example to help you get started with the `Modal` in your React application:
